@@ -1,3 +1,9 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { LoginComponent } from './pages/login/login.component';
+//#Aqui abaixo temos a configuração das rotas
+export const routes: Routes = [
+    {
+        path: "login",
+        component: LoginComponent
+    }
+];
