@@ -1,0 +1,223 @@
+//#Aqui estamos importando o arquivo "variables.scss", que está dentro
+//#do diretório "styles" e que contém todas as variáveis de cor.
+//@import "../../../styles/variables.scss";
+//#Obs: Estes dois pontos é para sair de dentro de um diretório
+
+// //## Aqui temos a estilização ##//
+// main {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;   
+
+
+//     section {
+//         height: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;    
+
+//         .main-section {        
+//             //#
+//             gap: 8px;    
+//             //#O "flex-grow", define a habilidade de um flex item de crescer, caso necessário. O valor dessa propriedade é um valor numérico sem indicação de unidade, que serve para cálculo de proporção. Este valor dita a quantidade de espaço disponível no container que será ocupado pelo item.
+//             //#Aqui funciona como se esta ".main-section", fosse oculpara apenas 70%
+//             //#"flex-grow: 1" da outra que é de 30% "flex-grow: 0.3".
+//             flex-grow: 2;
+//             background-color: $gray-bg;
+//         }
+
+//         .form-section {
+//             //#Aqui funciona como se esta ".form-section", fosse oculpara apenas 30%
+//             //#"flex-grow: 0.3" da outra que é de 70% "flex-grow: 1".
+//             flex-grow: 1;
+//             padding: 0 35px;
+            
+//             //#
+//             h2 {
+//                 font-size: 20px;
+//                 font-weight: bold;        
+//             }
+
+//             button {
+//                 width: 100%;
+//                 border-radius: 8px;
+//                 font-size: 16px;
+//                 //#Com o valor de "500", é a metade do "Bold"
+//                 font-weight: 500;
+//                 border: none;
+//                 background: transparent;
+            
+
+//                 //#Com o "scss", quando nós colocamos o "&", ele já identifica que é botão
+//                 &.btn-primary {
+//                     background-color: $primary-color;
+//                     color: white;
+//                 }
+
+//                 //#Com o "scss", quando nós colocamos o "&", ele já identifica que é botão
+//                 &.btn-secondary {
+//                     border: 1px solid $primary-color;
+//                     color: $primary-color;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+//#### AQUI DA MANEIRA CONVENCIONAL ####//
+//#Aqui estamos importando o arquivo "variables.scss", que está dentro
+//#do diretório "styles" e que contém todas as variáveis de cor.
+@import "../../../styles/variables.scss";
+//#Obs: Estes dois pontos é para sair de dentro de um diretório
+section .form-section button .btn-primary {
+    background-color: $primary-color;
+    color: white;
+}
+
+section .form-section button .btn-secondary {
+    background-color: $primary-color;
+    color: $primary-color;
+}
+
+
+//## Aqui temos a estilização ##//
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;   
+}
+
+section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.main-section {        
+    //#
+    gap: 8px;    
+    //#O "flex-grow", define a habilidade de um flex item de crescer, caso necessário. O valor dessa propriedade é um valor numérico sem indicação de unidade, que serve para cálculo de proporção. Este valor dita a quantidade de espaço disponível no container que será ocupado pelo item.
+    //#Aqui funciona como se esta ".main-section", fosse oculpara apenas 70%
+    //#"flex-grow: 1" da outra que é de 30% "flex-grow: 0.3".
+    flex-grow: 2;
+    background-color: $gray-bg;
+}
+
+.form-section {
+    //#Aqui funciona como se esta ".form-section", fosse oculpara apenas 30%
+    //#"flex-grow: 0.3" da outra que é de 70% "flex-grow: 1".
+    flex-grow: 1;
+    padding: 0 35px;
+    
+    //#Pode ser assim já dentro do ".form-section"
+    // img {
+    //     margin-bottom: 30px;    
+    // }
+}
+
+//#Ou pode ser fora individualmente como o padrão
+.form-section img {
+    margin-bottom: 30px;    
+} 
+
+//#
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 45px;        
+}
+
+/*## Normal ##*/
+// .btn-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     gap: 30px;
+// }
+
+// .divider{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 20px;    
+
+//     font-size: 12px;
+//     color: $gray-bg;
+//     font-weight: 400;
+//     text-transform: uppercase;
+// }
+
+// .divider div {
+//     width: 100%;
+//     min-width: 100%;
+//     height: 1px;
+//     background-color: $gray-bg;
+// }
+/*## Fim ##*/
+
+
+.btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+
+    .divider{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;    
+    
+        font-size: 12px;
+        color: $gray-bg02;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        div {            
+            min-width: 350%;
+            height: 3px;
+            background-color: $gray-bg02;
+        }
+    }    
+}
+//## FIM ##//
+
+button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    //#Com o valor de "500", é a metade do "Bold"
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    padding: 12px 24px;
+    box-shadow: 5px 5px 5px rgb(68 68 68 / 0.6);
+    cursor: pointer;
+}            
+
+//#Com o "scss", quando nós colocamos o "&", ele já identifica que é botão
+//&.btn-primary {
+.btn-primary {
+    background-color: $primary-color;
+    color: white;
+}
+
+//#Com o "scss", quando nós colocamos o "&", ele já identifica que é botão
+//&.btn-secondary {
+.btn-secondary {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+}
+            

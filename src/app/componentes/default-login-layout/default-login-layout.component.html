@@ -2,21 +2,37 @@
 <!--# -->
 <main>
     <!--#Início Primeira Section-->
-    <section>
+    <section class="form-section">
         <img src="/assets/imgs-svg/logo.svg" alt="Imagem da Logo" />
-        <h2></h2>
-        <button></button>
+        <h2>{{ title }}</h2>
+
+        <!--#Aqui abaixo teremos a implementação do conteúdo do formulário.-->
+        <ng-content></ng-content>
+
         <!--# -->
-        <div>
-            <span>Or</span>
+        <div class="btn-wrapper">
+            <!--# -->
+            <button class="btn-primary">{{ primaryBtnText }}</button>
+
+            <!--# -->
+            <div class="divider">
+                <!--# -->
+                <div></div>
+                <!--# -->                
+                    <span>Or</span>            
+                <!--# -->
+                <div></div>
+            </div>
+            
+            <!--# -->
+            <button class="btn-secondary">{{ secundaryBtnText }}</button>
         </div>
-        <!--# -->
-        <button></button>        
+                
     </section>
     <!--#Fim Primeira Section-->
 
     <!--#Início Segunda Section-->
-    <section>
+    <section class="main-section">
         <!--# -->
         <h1>You Should, MoveIt!</h1>
         <!--# -->
